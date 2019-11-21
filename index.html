@@ -125,34 +125,56 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
   text-align: center;
 }
 
+body[data-tags~="Logo"] { 
+  background-color: #FFFFFF;
+}
 tw-story[tags~="Logo"] {
   background-color: #FFFFFF;
 }
 
+body[data-tags~="COVER"] { 
+  background-image: url("images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+tw-story[tags~="COVER"] {
+  background-image: url("images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 tw-story[tags~="COVER"] {
   background-image: url("images/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-tw-story[tags~="COVER"] {
-  background-image: url("images/cover.jpg");
+body[data-tags~="LRH"] { 
+  background-image: url("images/forest.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 tw-story[tags~="LRH"] {
   background-image: url("images/forest.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+body[data-tags~="PAW"] { 
+  background-image: url("images/fence.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 tw-story[tags~="PAW"] {
   background-image: url("images/fence.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+body[data-tags~="TLP"] { 
+  background-image: url("images/pigs house.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 tw-story[tags~="TLP"] {
   background-image: url("images/pigs house.jpg");
   background-repeat: no-repeat;
