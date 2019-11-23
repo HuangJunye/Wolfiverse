@@ -200,7 +200,7 @@ setup.measurement = function (gate_array) {
 
 &lt;center&gt;\[SugarCube Edition\]&lt;/center&gt;
 
-&lt;center&gt;[[START|PAW]]&lt;/center&gt;</tw-passagedata><tw-passagedata pid="2" name="PAW" tags="PAW" position="250,400" size="100,100">In the middle of the mountain, The Wolf is lying down on his stomach.
+&lt;center&gt;[[START|PAW]]&lt;/center&gt;</tw-passagedata><tw-passagedata pid="2" name="PAW" tags="PAW" position="400,400" size="100,100">In the middle of the mountain, The Wolf is lying down on his stomach.
 After spending the whole day chasing the Crane and the Goat without success, this hungry canine is also a lone outcast left to his own fate.
 - AAAUUUUUUUU! -, cries The Wolf
 Instead of keeping chasing other wild animals he decides to go to down to the village to go after the sheep that the villagers keep.
@@ -255,41 +255,29 @@ The Wolf realizes that she was a nice person and decides to:
 [[Go back to Peter|Fence2]]</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW QC" position="1100,500" size="100,100">The Wolf sees Peter again, who start screaming for help.
 Last time, he ran away, but this time
 The Wolf:
-
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-
-/* determine gate_array */
-&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
-	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;set $passage0 to &#39;DecoyRH&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;WoodHouse&#39;&gt;&gt;
-
-[[Runs Away Again|QC][$gate_array=&quot;H,I,I&quot;]]
-[[Eats Peter|QC]]
-
-
-
-
-
-&lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
-	&lt;&lt;goto $path2&gt;&gt;
+&lt;&lt;link &quot;Runs Away Again&quot;&gt;&gt;
+	/* define passages */
+  	&lt;&lt;set $passage0 to &#39;DecoyRH&#39;&gt;&gt;
+ 	&lt;&lt;set $passage1 to &#39;WoodHouse&#39;&gt;&gt;
+	
+	/* use H gate for random outcome */
+  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;goto QC&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;set $rand1 to random(1)&gt;&gt;
-&lt;&lt;set $rand2 to random(1)&gt;&gt;
-&lt;&lt;if $rand1 is 1&gt;&gt;
-	&lt;&lt;set $path1 to &#39;DecoyRH&#39;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $path1 to &#39;WoodHouse&#39;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $rand2 is 1&gt;&gt;
-	&lt;&lt;set $path2 to &#39;GameOverPAW&#39;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $path2 to &#39;WinPAW&#39;&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DecoyRH" tags="LRH" position="1300,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching. He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. Then he decides to:
+&lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
+	/* define passages */
+	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
+	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
+	
+	/* determine gate_array */
+  	&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
+  		&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;else&gt;&gt;
+		&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
+  	&lt;&lt;/if&gt;&gt;
+  &lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DecoyRH" tags="LRH" position="1300,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching. He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. Then he decides to:
 
 &lt;&lt;if $pie is true&gt;&gt;
 	[[Use the pie as a decoy to get to grandmother&#39;s first|GranHouse]]
@@ -490,25 +478,40 @@ The Wolf thinks to himself:
 
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 
-WIN</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" position="400,400" size="100,100">As The Wolf approaches the fence with the sheep, he notices a boy nearby. He recognizes this boy: it&#39;s Peter, he used to throw rocks at him. While observing Peter he thinks to himself that the boy would be a much better meal!
+WIN</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" position="600,400" size="100,100">As The Wolf approaches the fence with the sheep, he notices a boy nearby. He recognizes this boy: it&#39;s Peter, he used to throw rocks at him. While observing Peter he thinks to himself that the boy would be a much better meal!
 
 He tries to get near him, but before he can come too close Peter screams for help.
-
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-
 The Wolf:
-/* define passages for measurement outcome */
-&lt;&lt;set $passage0 to &quot;LRH&quot;&gt;&gt;
-&lt;&lt;set $passage1 to &quot;TLP&quot;&gt;&gt;
-[[Runs Away|QC][$gate_array=&quot;H,I,I&quot;]]
-[[Eats Peter|GameOverPAW]]</tw-passagedata><tw-passagedata pid="24" name="QC" tags="" position="400,700" size="100,100">&lt;&lt;run setup.measurement($gate_array)&gt;&gt;
+&lt;&lt;link &quot;Runs Away&quot;&gt;&gt;
+	/* define passages */
+  	&lt;&lt;set $passage0 to &quot;LRH&quot;&gt;&gt;
+	&lt;&lt;set $passage1 to &quot;TLP&quot;&gt;&gt;
+	
+	/* use H gate for random outcome */
+  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
+	/* define passages */
+	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
+	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
+	
+	/* determine gate_array */
+  	&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
+  		&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;else&gt;&gt;
+		&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
+  	&lt;&lt;/if&gt;&gt;
+  &lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QC" tags="" position="200,600" size="100,100">&lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 
 Gate array: $gate_array
 [[next]]
 
 /* use below code to jump directly to the next scene
 &lt;&lt;goto next&gt;&gt;
-*/</tw-passagedata><tw-passagedata pid="25" name="next" tags="QC" position="550,400" size="100,100">Measurement result = $result
+*/</tw-passagedata><tw-passagedata pid="25" name="next" tags="QC" position="350,600" size="100,100">Measurement result = $result
 Passage 0 = $passage0
 Passage 1 = $passage1
 
