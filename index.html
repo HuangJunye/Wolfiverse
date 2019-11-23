@@ -238,6 +238,7 @@ GAMEOVER</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" pos
 
 [[Refuses it and runs after the the Little Pig |WoodHouse]]
 &lt;&lt;link &quot;Accepts it and leaves the Pig alone&quot; &quot;Fence2&quot;&gt;&gt;
+	/* pie is a H gate */
 	&lt;&lt;set $pie to true&gt;&gt;
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,100" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
 There is no way for The Wolf to get inside now, and he starves to death.
@@ -266,7 +267,10 @@ The Wolf:
 	[[Go after Peter once again|Fence3]]
 &lt;&lt;else&gt;&gt;
 	[[Go after Peter once again|Fence3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="WoodHouse" tags="TLP" position="1300,600" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. He&#39;s still hungry and tries to blow up their house without success. Then he decides to:
+&lt;&lt;/if&gt;&gt;
+
+/* $Z is a Z gate */
+&lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="WoodHouse" tags="TLP" position="1300,600" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. He&#39;s still hungry and tries to blow up their house without success. Then he decides to:
 
 &lt;img class=&quot;image&quot; src=&quot;images/wood house.png&quot;/&gt;
 
@@ -275,7 +279,10 @@ The Wolf:
 	[[Give up and go after Peter|Fence3]]
 &lt;&lt;else&gt;&gt;
 	[[Give up and go after Peter|Fence3]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
+&lt;&lt;/if&gt;&gt;
+
+/* $Z is a Z gate */
+&lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
 
 After this propper meal he&#39;s ready to have some rest in the mountain.
 
@@ -285,15 +292,11 @@ WIN</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" positio
 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 
-&lt;&lt;link &quot;Enter the chimney.&quot;&gt;&gt;
-	/* define passages */
-  	&lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
- 	&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;
-	
-	/* use H gate for random outcome */
-  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Fence3" tags="PAW" position="1500,400" size="100,100">The Wolf sees Peter again, who starts screaming for help.
+[[Enter the chimney|QRandom]] 
+
+/* define passages */
+&lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
+&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Fence3" tags="PAW" position="1500,400" size="100,100">The Wolf sees Peter again, who starts screaming for help.
 Last time, he ran away, but this time the Wolf:
 
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
@@ -308,7 +311,10 @@ Last time, he ran away, but this time the Wolf:
 &lt;img class=&quot;image&quot; src=&quot;images/pig.png&quot;/&gt;
 
 [[Eat the Three Little Pigs|WinTLP]]
-[[Grab the coat and go after Peter|GetPeter]]</tw-passagedata><tw-passagedata pid="17" name="InsideGranHouse" tags="LRH" position="1800,200" size="100,100">The Wolf lands inside the Grandmother&#39;s House while she is still preparing some tea in the kitchen. The Wolf cathes her by surpise and eats her.
+&lt;&lt;link &#39;Grab the coat and go after Peter&#39; &#39;GetPeter&#39;&gt;&gt;
+	/* sheep_skin is a H gate */
+	&lt;&lt;set $sheep_skin to true&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="InsideGranHouse" tags="LRH" position="1800,200" size="100,100">The Wolf lands inside the Grandmother&#39;s House while she is still preparing some tea in the kitchen. The Wolf cathes her by surpise and eats her.
 Sudenly the Wolf hears Little Red Hood aproaching the house and he thinks about using the granmother&#39;s clothes to disguise himself and trick Little Red Hood.
 
 &lt;img class=&quot;image&quot; src=&quot;images/grandma.png&quot;/&gt;
@@ -326,7 +332,10 @@ The Wolf replies:
 The Wolf, thought for a secound and replied:
 
 [[- It is to eat the food that I am about to cook for us!|WinLRH]]
-[[- The better to eat you, my dear!|ChaseLRH]]</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2300,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
+[[- The better to eat you, my dear!|ChaseLRH]]
+
+/* grandmother&#39;s clothes is a H gate */
+&lt;&lt;set $grandma_clothes to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2300,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
 
 The Wolf finally gets a propper meal and goes to rest in the gradnmother&#39;s bed.
 
@@ -348,15 +357,11 @@ The Wolf thinks to himself:
 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 
-&lt;&lt;link &quot;Enter the chimney.&quot;&gt;&gt;
-	/* define passages */
-  	&lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
- 	&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;
-	
-	/* use H gate for random outcome */
-  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the livingroom couch.
+[[Enter the chimney|QRandom]]
+
+/* define passages */
+&lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
+&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the livingroom couch.
 
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 
@@ -405,13 +410,13 @@ Passage 1 = $passage1
 	/* 2nd gate: Z */
 	&lt;&lt;if $Z is true&gt;&gt;
 		/* 3rd gate: H */
-		&lt;&lt;if $inside_house is true&gt;&gt;
+		&lt;&lt;if $grandma_clothes is true or $sheep_skin is true&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;H,Z,H&quot;&gt;&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;H,Z,I&quot;&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;else&gt;&gt;
-		&lt;&lt;if $inside_house is true&gt;&gt;
+		&lt;&lt;if $grandma_clothes is true or $sheep_skin is true&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;H,I,H&quot;&gt;&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
@@ -419,13 +424,13 @@ Passage 1 = $passage1
 	&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;
 	&lt;&lt;if $Z is true&gt;&gt;
-		&lt;&lt;if $inside_house is true&gt;&gt;
+		&lt;&lt;if $grandma_clothes is true or $sheep_skin is true&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;I,Z,H&quot;&gt;&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;I,Z,I&quot;&gt;&gt;
 		&lt;&lt;/if&gt;&gt;
 	&lt;&lt;else&gt;&gt;
-		&lt;&lt;if $inside_house is true&gt;&gt;
+		&lt;&lt;if $grandma_clothes is true or $sheep_skin is true&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;I,I,H&quot;&gt;&gt;
 		&lt;&lt;else&gt;&gt;
 			&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
