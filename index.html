@@ -242,39 +242,24 @@ GAMEOVER</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" pos
 &lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,100" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
 There is no way for The Wolf to get inside now, and he starves to death.
 
-GAME OVER</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1100,300" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
+GAME OVER</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1025,275" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
 The Wolf realizes that she was a nice person and decides to:
 
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
 
 /* matchbox is a H gate */
 &lt;&lt;set $matchbox to true&gt;&gt;
-[[Go back to Peter|Fence2]]</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW QC" position="1100,500" size="100,100">The Wolf sees Peter again, who start screaming for help.
+[[Go back to Peter|Fence2]]</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW QC" position="1100,400" size="100,100">The Wolf sees Peter again, who start screaming for help.
 Last time, he ran away, but this time
 The Wolf:
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-&lt;&lt;link &quot;Runs Away Again&quot;&gt;&gt;
-	/* define passages */
-  	&lt;&lt;set $passage0 to &#39;DecoyRH&#39;&gt;&gt;
- 	&lt;&lt;set $passage1 to &#39;WoodHouse&#39;&gt;&gt;
-	
-	/* use H gate for random outcome */
-  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
-	/* define passages */
-	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
-	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
-	
-	/* determine gate_array */
-  	&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
-  		&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;else&gt;&gt;
-		&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
-  	&lt;&lt;/if&gt;&gt;
-  &lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DecoyRH" tags="LRH" position="1300,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching. He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. Then he decides to:
+
+[[Runs Away Again|QRandom]]
+[[Eat Peter]] 
+
+/* define passages */
+&lt;&lt;set $passage0 to &#39;DecoyRH&#39;&gt;&gt;
+&lt;&lt;set $passage1 to &#39;WoodHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DecoyRH" tags="LRH" position="1300,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching. He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. Then he decides to:
 
 &lt;&lt;if $pie is true&gt;&gt;
 	[[Use the pie as a decoy to get to grandmother&#39;s first|GranHouse]]
@@ -313,28 +298,12 @@ Last time, he ran away, but this time the Wolf:
 
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 
-&lt;&lt;link &quot;Still leaves him alone and Runs Away&quot;&gt;&gt;
-	/* define passages */
-  	&lt;&lt;set $passage0 to &#39;GranHouse&#39;&gt;&gt;
- 	&lt;&lt;set $passage1 to &#39;BrickHouse&#39;&gt;&gt;
-	
-	/* use H gate for random outcome */
-  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
-	/* define passages */
-	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
-	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
-	
-	/* determine gate_array */
-  	&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
-  		&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;else&gt;&gt;
-		&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
-  	&lt;&lt;/if&gt;&gt;
-  &lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideBrickHouse" tags="TLP" position="1800,600" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. While he is making his way, tip tap toeing he notices a huge sheep skin coat. He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. Faced with this option he decides to: 
+[[Still leaves him alone and Runs Away|QRandom]]
+[[Eat Peter]] 
+
+/* define passages */
+&lt;&lt;set $passage0 to &#39;GranHouse&#39;&gt;&gt;
+&lt;&lt;set $passage1 to &#39;BrickHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideBrickHouse" tags="TLP" position="1800,600" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. While he is making his way, tip tap toeing he notices a huge sheep skin coat. He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. Faced with this option he decides to: 
 
 &lt;img class=&quot;image&quot; src=&quot;images/pig.png&quot;/&gt;
 
@@ -363,7 +332,7 @@ The Wolf finally gets a propper meal and goes to rest in the gradnmother&#39;s b
 
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 
-WIN</tw-passagedata><tw-passagedata pid="19" name="ChaseLRH" tags="LRH" position="1950,300" size="100,100">Litle Red Hood realizes the grandmother was the Wolf in disguse and runs away.
+WIN</tw-passagedata><tw-passagedata pid="19" name="ChaseLRH" tags="LRH" position="1925,275" size="100,100">Litle Red Hood realizes the grandmother was the Wolf in disguse and runs away.
 
 The Wolf tries to chase her, but she is too fast for him.
 
@@ -371,23 +340,11 @@ Taking into account all the hard work to get into this disguise, the Wolf decide
 
 The Wolf thinks to himself:
 
-[[Surelly Peter would not suspect of an old lady aproaching him!|GetPeter]]</tw-passagedata><tw-passagedata pid="20" name="GetPeter" tags="PAW" position="2100,400" size="100,100">Wearing his new disguise the Wolf is able to get closer to Peter without him suspecting of anything. The Wolf is extremely hungry at this point and so he jumps to:
+[[Surelly Peter would not suspect of an old lady aproaching him!|GetPeter]]</tw-passagedata><tw-passagedata pid="20" name="GetPeter" tags="PAW" position="2000,400" size="100,100">Wearing his new disguise the Wolf is able to get closer to Peter without him suspecting of anything. The Wolf is extremely hungry at this point and so he jumps to:
 
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 
-&lt;&lt;link &quot;Eat Peter!&quot;&gt;&gt;
-	/* define passages */
-	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
-	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
-	
-	/* 
-	TODO: 
-	1. add more condition for determine gate_array
-	2. put eat peter to a seperate passage to prevent repetition
-	*/
-  	&lt;&lt;set $gate_array to &quot;H,Z,H&quot;&gt;&gt;
-  &lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. He&#39;s not sure if they are inside, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
+[[Eat Peter]] </tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. He&#39;s not sure if they are inside, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 
@@ -408,35 +365,22 @@ WIN</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" positio
 He tries to get near him, but before he can come too close Peter screams for help.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 The Wolf:
-&lt;&lt;link &quot;Runs Away&quot;&gt;&gt;
-	/* define passages */
-  	&lt;&lt;set $passage0 to &quot;LRH&quot;&gt;&gt;
-	&lt;&lt;set $passage1 to &quot;TLP&quot;&gt;&gt;
-	
-	/* use H gate for random outcome */
-  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
-	/* define passages */
-	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
-	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
-	
-	/* determine gate_array */
-  	&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
-  		&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
-  	&lt;&lt;else&gt;&gt;
-		&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
-  	&lt;&lt;/if&gt;&gt;
-  &lt;&lt;goto QC&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QC" tags="" position="200,600" size="100,100">&lt;&lt;run setup.measurement($gate_array)&gt;&gt;
+[[Runs Away|QRandom]]
+[[Eat Peter]] 
+
+/* define passages */
+&lt;&lt;set $passage0 to &#39;LRH&#39;&gt;&gt;
+&lt;&lt;set $passage1 to &#39;TLP&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QRandom" tags="" position="900,900" size="100,100">/* use H gate for random outcome */
+&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+/* run measurement */
+&lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 
 Gate array: $gate_array
-[[next]]
+[[Measurement Outcome]]
 
 /* use below code to jump directly to the next scene
-&lt;&lt;goto next&gt;&gt;
-*/</tw-passagedata><tw-passagedata pid="25" name="next" tags="QC" position="350,600" size="100,100">Measurement result = $result
+&lt;&lt;goto Measurement Outcome&gt;&gt;
+*/</tw-passagedata><tw-passagedata pid="25" name="Measurement Outcome" tags="QC" position="1200,900" size="100,100">Measurement result = $result
 Passage 0 = $passage0
 Passage 1 = $passage1
 
@@ -451,6 +395,52 @@ Passage 1 = $passage1
 &lt;&lt;/if&gt;&gt;
 /*
 &lt;&lt;goto $next&gt;&gt;
+*/</tw-passagedata><tw-passagedata pid="26" name="Eat Peter" tags="" position="1500,900" size="100,100">/* define passages */
+&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
+&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
+
+/* determine gate_array */
+/* 1st gate: H */
+&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
+	/* 2nd gate: Z */
+	&lt;&lt;if $Z is true&gt;&gt;
+		/* 3rd gate: H */
+		&lt;&lt;if $inside_house is true&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;H,Z,H&quot;&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;H,Z,I&quot;&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;if $inside_house is true&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;H,I,H&quot;&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+	&lt;&lt;if $Z is true&gt;&gt;
+		&lt;&lt;if $inside_house is true&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;I,Z,H&quot;&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;I,Z,I&quot;&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;if $inside_house is true&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;I,I,H&quot;&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+/* run measurement */
+&lt;&lt;run setup.measurement($gate_array)&gt;&gt;
+
+Gate array: $gate_array
+[[Measurement Outcome]]
+
+/* use below code to jump directly to the next scene
+&lt;&lt;goto Measurement Outcome&gt;&gt;
 */</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
