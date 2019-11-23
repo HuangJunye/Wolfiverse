@@ -221,7 +221,7 @@ The Wolf is hungry, so he decides to:
 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 
-[[Follow one of them|StrawHouse]]</tw-passagedata><tw-passagedata pid="5" name="GameOverPAW" tags="PAW" position="900,400" size="100,100">The vilagers heard Peter crying for help and came to his rescue.
+[[Follow one of them|StrawHouse]]</tw-passagedata><tw-passagedata pid="5" name="GameOverPAW" tags="PAW" position="2300,350" size="100,100">The vilagers heard Peter crying for help and came to his rescue.
 
 Before The Wolf was able to eat Peter they capture him and lock him in a cage where he starves to death.
 
@@ -238,11 +238,8 @@ GAMEOVER</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" pos
 
 [[Refuses it and runs after the the Little Pig |WoodHouse]]
 &lt;&lt;link &quot;Accepts it and leaves the Pig alone&quot; &quot;Fence2&quot;&gt;&gt;
-&lt;&lt;set $pie to true&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;!--
-[[(set: $pie to true)Accepts it and leaves the Pig alone |Fence2]]
---&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="1100,100" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
+	&lt;&lt;set $pie to true&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,100" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
 There is no way for The Wolf to get inside now, and he starves to death.
 
 GAME OVER</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1100,300" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
@@ -284,18 +281,7 @@ The Wolf:
 	[[Go after Peter once again|Fence3]]
 &lt;&lt;else&gt;&gt;
 	[[Go after Peter once again|Fence3]]
-&lt;&lt;/if&gt;&gt;
-&lt;!--
-(if: $pie is true)
-[
-[[Use the pie as a decoy to get to grandmother&#39;s first|GranHouse]]
-[[Go after Peter once again|Fence3]]
-]
-(else:)
-[
-[[Go after Peter once again|Fence3]]
-]
---&gt;</tw-passagedata><tw-passagedata pid="12" name="WoodHouse" tags="TLP" position="1300,600" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. He&#39;s still hungry and tries to blow up their house without success. Then he decides to:
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="WoodHouse" tags="TLP" position="1300,600" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. He&#39;s still hungry and tries to blow up their house without success. Then he decides to:
 
 &lt;img class=&quot;image&quot; src=&quot;images/wood house.png&quot;/&gt;
 
@@ -304,18 +290,7 @@ The Wolf:
 	[[Give up and go after Peter|Fence3]]
 &lt;&lt;else&gt;&gt;
 	[[Give up and go after Peter|Fence3]]
-&lt;&lt;/if&gt;&gt;
-&lt;!--
-(if: $matchbox is true)
-[
-[[Burn it Down and chase the Little Pigs|BrickHouse]]
-[[Give up and go after Peter|Fence3]]
-]
-(else:)
-[
-[[Give up and go after Peter|Fence3]]
-]
---&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="1300,400" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
 
 After this propper meal he&#39;s ready to have some rest in the mountain.
 
@@ -325,86 +300,41 @@ WIN</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" positio
 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 
-&lt;&lt;set $rand to random(1)&gt;&gt;
 &lt;&lt;link &quot;Enter the chimney.&quot;&gt;&gt;
-&lt;&lt;goto $path&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;if $rand is 1&gt;&gt;
-	&lt;&lt;set $path to &#39;InsideBrickHouse&#39;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $path to &#39;InsideGranHouse&#39;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;!--
-[[Enter the chimney.|InsideBrickHouse]] 50% needs revision
-[[Enter the chimney.|InsideGranHouse]] 50% needs revision
-
-(link: &quot;Enter the chimney.&quot;)[\
-	(go-to: $path)
-]
-(set: $rand to (random:1))
-(if: $rand is 1)
-	[
-		(set: $path to &#39;InsideBrickHouse&#39;)
-	]
-(else:)
-	[
-		(set: $path to &#39;InsideGranHouse&#39;)
-	]
---&gt;</tw-passagedata><tw-passagedata pid="15" name="Fence3" tags="PAW" position="1500,400" size="100,100">The Wolf sees Peter again, who starts screaming for help.
+	/* define passages */
+  	&lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
+ 	&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;
+	
+	/* use H gate for random outcome */
+  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Fence3" tags="PAW" position="1500,400" size="100,100">The Wolf sees Peter again, who starts screaming for help.
 Last time, he ran away, but this time the Wolf:
 
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 
 &lt;&lt;link &quot;Still leaves him alone and Runs Away&quot;&gt;&gt;
-&lt;&lt;goto $path1&gt;&gt;
+	/* define passages */
+  	&lt;&lt;set $passage0 to &#39;GranHouse&#39;&gt;&gt;
+ 	&lt;&lt;set $passage1 to &#39;BrickHouse&#39;&gt;&gt;
+	
+	/* use H gate for random outcome */
+  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;goto QC&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Eats Peter&quot;&gt;&gt;
-&lt;&lt;goto $path2&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;set $rand1 to random(1)&gt;&gt;
-&lt;&lt;set $rand2 to random(1)&gt;&gt;
-&lt;&lt;if $rand1 is 1&gt;&gt;
-	&lt;&lt;set $path1 to &#39;GranHouse&#39;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $path1 to &#39;BrickHouse&#39;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $rand2 is 1&gt;&gt;
-	&lt;&lt;set $path2 to &#39;GameOverPAW&#39;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $path2 to &#39;WinPAW&#39;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;!--
-[[Still leaves him alone and Runs Away |GranHouse]] 50% needs revision
-[[Still leaves him alone and Runs Away |BrickHouse]] 50% needs revision
-
-[[Eats Peter|GameOverPAW]] 50% needs revision
-[[Eats Peter|WinPAW]] 50% needs revision
-
-(link: &quot;Still leaves him alone and Runs Away&quot;)[\
-	(go-to: $path1)
-]
-(link: &quot;Eats Peter&quot;)[\
-	(go-to: $path2)
-]
-(set: $rand1 to (random:1))
-(set: $rand2 to (random:1))
-(if: $rand1 is 1)
-	[
-		(set: $path1 to &#39;GranHouse&#39;)
-	]
-(else:)
-	[
-		(set: $path1 to &#39;BrickHouse&#39;)
-	]
-(if: $rand2 is 1)
-	[
-		(set: $path2 to &#39;GameOverPAW&#39;)
-	]
-(else:)
-	[
-		(set: $path2 to &#39;WinPAW&#39;)
-	]
---&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideBrickHouse" tags="TLP" position="1800,600" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. While he is making his way, tip tap toeing he notices a huge sheep skin coat. He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. Faced with this option he decides to: 
+	/* define passages */
+	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
+	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
+	
+	/* determine gate_array */
+  	&lt;&lt;if $matchbox is true or $pie is true&gt;&gt;
+  		&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;else&gt;&gt;
+		&lt;&lt;set $gate_array to &quot;I,I,I&quot;&gt;&gt;
+  	&lt;&lt;/if&gt;&gt;
+  &lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideBrickHouse" tags="TLP" position="1800,600" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. While he is making his way, tip tap toeing he notices a huge sheep skin coat. He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. Faced with this option he decides to: 
 
 &lt;img class=&quot;image&quot; src=&quot;images/pig.png&quot;/&gt;
 
@@ -427,7 +357,7 @@ The Wolf replies:
 The Wolf, thought for a secound and replied:
 
 [[- It is to eat the food that I am about to cook for us!|WinLRH]]
-[[- The better to eat you, my dear!|ChaseLRH]]</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2100,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
+[[- The better to eat you, my dear!|ChaseLRH]]</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2300,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
 
 The Wolf finally gets a propper meal and goes to rest in the gradnmother&#39;s bed.
 
@@ -445,36 +375,31 @@ The Wolf thinks to himself:
 
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 
-[[Eat Peter!|WinPAW]]</tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. He&#39;s not sure if they are inside, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
+&lt;&lt;link &quot;Eat Peter!&quot;&gt;&gt;
+	/* define passages */
+	&lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
+	&lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
+	
+	/* 
+	TODO: 
+	1. add more condition for determine gate_array
+	2. put eat peter to a seperate passage to prevent repetition
+	*/
+  	&lt;&lt;set $gate_array to &quot;H,Z,H&quot;&gt;&gt;
+  &lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. He&#39;s not sure if they are inside, as the windows are closed and the door is locked. All this running back and forth has got him really tired. At last, he looks up and decides to go up the roof and:
 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 
-&lt;&lt;set $rand to random(1)&gt;&gt;
 &lt;&lt;link &quot;Enter the chimney.&quot;&gt;&gt;
-&lt;&lt;goto $path&gt;&gt;
-&lt;&lt;/link&gt;&gt;
-&lt;&lt;if $rand is 1&gt;&gt;
-	&lt;&lt;set $path to &#39;InsideBrickHouse&#39;&gt;&gt;
-&lt;&lt;else&gt;&gt;
-	&lt;&lt;set $path to &#39;InsideGranHouse&#39;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;!--
-[[Enter the chimney.|InsideBrickHouse]] 50% needs revision
-[[Enter the chimney.|InsideGranHouse]] 50% needs revision
-
-(link: &quot;Enter the chimney.&quot;)[\
-	(go-to: $path)
-]
-(set: $rand to (random:1))
-(if: $rand is 1)
-	[
-		(set: $path to &#39;InsideBrickHouse&#39;)
-	]
-(else:)
-	[
-		(set: $path to &#39;InsideGranHouse&#39;)
-	]
---&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2100,600" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the livingroom couch.
+	/* define passages */
+  	&lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
+ 	&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;
+	
+	/* use H gate for random outcome */
+  	&lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
+  	&lt;&lt;goto QC&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the livingroom couch.
 
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 
