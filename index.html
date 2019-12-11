@@ -179,7 +179,23 @@ tw-story[tags~="TLP"] {
   background-image: url("images/pigs house.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
+a:hover{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1.0s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.setup = window.setup || {}
+
+Config.ui.stowBarInitially = true
 
 setup.showAlert = function () {
 	alert("This is a browser alert")
@@ -285,7 +301,7 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" position="1600,200" size="100,100">The Wolf finally gets to this house which looks like Grandmother&#39;s House. 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;He&#39;s not sure if she is in there, as the windows are closed and the door is locked. 
-&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looks up and decides to go up the roof and[[enter the chimney|QRandom]] 
+&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looks up and decides to go up the roof and [[enter the chimney|QRandom]] 
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
