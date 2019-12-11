@@ -137,52 +137,19 @@ body[data-tags~="Logo"] {
 }
 
 body[data-tags~="COVER"] { 
-  background-image: url("images/cover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="COVER"] {
-  background-image: url("images/cover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="COVER"] {
-  background-image: url("images/cover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #FFFFFF;
 }
 
 body[data-tags~="LRH"] { 
-  background-image: url("images/forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="LRH"] {
-  background-image: url("images/forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #6e0f2d
 }
 
 body[data-tags~="PAW"] { 
-  background-image: url("images/fence.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="PAW"] {
-  background-image: url("images/fence.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #24305e
 }
 
 body[data-tags~="TLP"] { 
-  background-image: url("images/pigs house.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="TLP"] {
-  background-image: url("images/pigs house.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #1D4D4F
 }
 
 @-webkit-keyframes blinker {
@@ -190,7 +157,12 @@ tw-story[tags~="TLP"] {
   to {opacity: 0.0;}
 }
 
+a {
+  color: #f5af22;
+}
+
 a:hover{
+  	color: #f5af22;
 	text-decoration: blink;
 	-webkit-animation-name: blinker;
 	-webkit-animation-duration: 1.0s;
@@ -237,13 +209,11 @@ setup.measurement = function (gate_array) {
 Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;&lt;next&gt;&gt;The Wolf is hungry, so he decides to:
 [[Follow Red Hood|ForestLRH]]&lt;&lt;/timed&gt;&gt;
-&lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;</tw-passagedata><tw-passagedata pid="4" name="TLP" tags="" position="600,600" size="100,100">The Wolf runs away before the villagers arrive.
+&lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;</tw-passagedata><tw-passagedata pid="4" name="TLP" tags="TLP" position="600,600" size="100,100">The Wolf runs away before the villagers arrive.
 &lt;&lt;timed 3s t8n&gt;&gt;He finds a house in the midlle of the green forest.
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;Through an open window he&#39;s able to overhear the Three Little Pigs talking about this party that they are setting. &lt;&lt;next&gt;&gt;However two of the Little Pigs need to grab something from their homes.
-&lt;&lt;next&gt;&gt;The Wolf is hungry, so he decides to:
-
-[[Follow one of them|StrawHouse]]
+&lt;&lt;next&gt;&gt;The Wolf is hungry, so he decides to [[follow one of them|StrawHouse]]
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="GameOverPAW" tags="PAW" position="2300,330" size="100,100">The vilagers heard Peter crying for help and came to his rescue.
 &lt;&lt;timed 3s t8n&gt;&gt;Before The Wolf was able to eat Peter they capture him and lock him in a cage where he starves to death.
 &lt;img class=&quot;image&quot; src=&quot;images/villager.png&quot;/&gt;
