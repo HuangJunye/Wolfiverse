@@ -100,7 +100,13 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Wolfiverse" startnode="1" creator="Twine" creator-version="2.3.5" ifid="95203909-183A-4223-BC6A-09647310658A" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body 
+	<tw-storydata name="Wolfiverse" startnode="1" creator="Twine" creator-version="2.3.5" ifid="95203909-183A-4223-BC6A-09647310658A" zoom="1" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap');
+  
+html {
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+body 
 {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
 }
@@ -126,9 +132,6 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 }
 
 body[data-tags~="Logo"] { 
-  background-color: #FFFFFF;
-}
-tw-story[tags~="Logo"] {
   background-color: #FFFFFF;
 }
 
