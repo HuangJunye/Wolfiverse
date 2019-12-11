@@ -247,7 +247,12 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
     GAME OVER
 &lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" position="900,200" size="100,100">The Wolf intersects Red Hood in forest. 
+&lt;&lt;next&gt;&gt;
+&lt;div align=&#39;center&#39;&gt;
+&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" position="900,200" size="100,100">The Wolf intersects Red Hood in forest. 
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;But before he had the oportunity to try anything she asks him what is the best route to get to the Grandmother&#39;s house. &lt;&lt;next&gt;&gt;The wolf thinks for a second and then decides to: 
 [[Let her know that the mushroom path is faster to get there. |GameOverRH]]
@@ -263,12 +268,12 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,80" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
 &lt;&lt;timed 3s t8n&gt;&gt;There is no way for The Wolf to get inside now, and he starves to death.
-
 &lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
-    GAME OVER
+&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
+GAME OVER
 &lt;/div&gt;
-
+&lt;&lt;next&gt;&gt;
+&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1025,275" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;The Wolf realizes that she was a nice person and decides to &lt;&lt;set $matchbox to true&gt;&gt; /* matchbox is a H gate */[[go back to Peter|Fence2]]
@@ -306,11 +311,12 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
 &lt;&lt;timed 3s t8n&gt;&gt;After this propper meal he&#39;s ready to have some rest in the mountain.
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
-
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
     Win!
 &lt;/div&gt;
+&lt;&lt;next&gt;&gt;
+&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" position="1600,200" size="100,100">The Wolf finally gets to this house which looks like Grandmother&#39;s House. 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;He&#39;s not sure if she is in there, as the windows are closed and the door is locked. 
@@ -355,13 +361,15 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;
 /* grandmother&#39;s clothes is a H gate */
 &lt;&lt;set $grandma_clothes to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2300,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
-
-&lt;&lt;timed 3s t8n&gt;&gt;The Wolf finally gets a propper meal and goes to rest in the gradnmother&#39;s bed.
+&lt;&lt;timed 3s t8n&gt;&gt;The Wolf finally gets a propper meal and goes to rest in the grandmother&#39;s bed.
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
-
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
     Win!
+&lt;/div&gt;
+&lt;&lt;next&gt;&gt;
+&lt;div align=&#39;center&#39;&gt;
+&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="ChaseLRH" tags="LRH" position="1925,275" size="100,100">Litle Red Hood realizes the grandmother was the Wolf in disguse and runs away.
 &lt;&lt;timed 3s t8n&gt;&gt;The Wolf tries to chase her, but she is too fast for him.
@@ -381,10 +389,14 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 /* define passages */
 &lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
 &lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the living room couch.
-
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
-
-&lt;&lt;timed 3s t8n&gt;&gt;WIN&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" position="600,400" size="100,100">As the Wolf approaches the fence with the sheep, he notices a boy nearby. 
+&lt;&lt;timed 3s t8n&gt;&gt;
+&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
+    Win!
+&lt;/div&gt;
+&lt;&lt;next&gt;&gt;
+&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" position="600,400" size="100,100">As the Wolf approaches the fence with the sheep, he notices a boy nearby. 
 &lt;&lt;timed 3s t8n&gt;&gt;He recognizes this boy: it&#39;s Peter. 
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;Peter used to throw rocks at him. &lt;&lt;next&gt;&gt;While observing Peter he thinks to himself that the boy would be a much better meal!
