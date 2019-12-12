@@ -169,7 +169,33 @@ a:hover{
 	-webkit-animation-iteration-count:infinite;
 	-webkit-animation-timing-function:ease-in-out;
 	-webkit-animation-direction: alternate;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.setup = window.setup || {}
+}
+
+body[data-tags~="QC"] {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 10s ease infinite;
+    }
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.setup = window.setup || {}
 
 Config.ui.stowBarInitially = true
 
@@ -187,7 +213,6 @@ setup.measurement = function (gate_array) {
 		  state.active.variables.result = Http.responseText;
 	}
 }
-
 </script><tw-passagedata pid="1" name="Logo" tags="Logo" position="100,400" size="100,100">&lt;img id=&quot;logo&quot; src=&quot;images/logo.png&quot;/&gt;
 
 &lt;center&gt;[[START|PAW]]&lt;/center&gt;
@@ -223,7 +248,8 @@ setup.measurement = function (gate_array) {
 &lt;&lt;/timed&gt;&gt;
 </tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" position="900,200" size="100,100">The Wolf intersected Red Hood in the forest. 
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;But before he had the opportunity to try anything, she asked him what the best route to get to the Grandmother&#39;s house is. &lt;&lt;next&gt;&gt;The Wolf thought for a second and decided to: 
+&lt;&lt;timed 3s t8n&gt;&gt;But before he had the opportunity to try anything, she asked him what the best route to get to the Grandmother&#39;s house is. 
+&lt;&lt;next&gt;&gt;The Wolf thought for a second and decided to: 
 [[Let her know that the mushroom path is faster to get there. |GameOverRH]]
 [[Deceived her into following the longer flower path|LongPath]]
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="StrawHouse" tags="TLP" position="900,600" size="100,100">The Wolf found the Little Pig entering a Straw House and he blowed it away with ease.
@@ -246,7 +272,7 @@ GAME OVER
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1025,275" size="100,100">Litte Red Hood thanked the Wolf and gave him a &lt;span style=&quot;color: grey;&quot;&gt;matchbox&lt;/span&gt;.
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;The Wolf realized that she was a nice person and decided to &lt;&lt;set $matchbox to true&gt;&gt; /* matchbox is a H gate */[[go back to Peter|Fence2]]
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW QC" position="1100,400" size="100,100">The Wolf saw Peter again, who started screaming for help.
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW" position="1100,400" size="100,100">The Wolf saw Peter again, who started screaming for help.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 &lt;&lt;timed 2s t8n&gt;&gt;Last time, he ran away, but this time the Wolf decided to:
 [[runs away again|QRandom]]
@@ -279,7 +305,7 @@ GAME OVER
 &lt;&lt;timed 3s t8n&gt;&gt;After the propper meal he was ready to have some rest in the mountain.
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
+&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
     WIN!
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;
@@ -359,30 +385,29 @@ GAME OVER
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" position="600,400" size="100,100">As the Wolf approached the fence with the sheep, he noticed a boy nearby. 
-&lt;&lt;timed 3s t8n&gt;&gt;He recognized the boy: it&#39;s Peter. 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW" position="600,400" size="100,100">As the Wolf approached the fence with the sheep, he noticed a boy nearby. 
+&lt;&lt;timed 3s t8n&gt;&gt;It&#39;s Peter, he recognized the boy.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;Peter used to throw rocks at him. &lt;&lt;next&gt;&gt;While observing Peter, the Wolf thought to himself that the boy would be a much better meal!
 &lt;&lt;next&gt;&gt;Before he could get close, Peter screamed for help.
 &lt;&lt;next&gt;&gt;The Wolf decided to:
-[[run Away|QRandom]]
+[[run away|QRandom]]
 [[eat Peter]] 
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
 &lt;&lt;set $passage0 to &#39;LRH&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;TLP&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QRandom" tags="" position="900,900" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $passage1 to &#39;TLP&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QRandom" tags="QC" position="900,900" size="100,100">&lt;&lt;silently&gt;&gt;
 /* use H gate for random outcome */
 &lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
 /* run measurement */
 &lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-Gate array: $gate_array
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="25" name="Measurement Outcome" tags="QC" position="1200,900" size="100,100">Measurement result = $result
+/* Gate array: $gate_array */
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Measurement Outcome" tags="QC" position="1200,900" size="100,100">/* Measurement result = $result
 Passage 0 = $passage0
 Passage 1 = $passage1
-
+*/
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;if $result == 0&gt;&gt;
 	&lt;&lt;set $next to $passage0&gt;&gt;
@@ -390,7 +415,7 @@ Passage 1 = $passage1
 	&lt;&lt;set $next to $passage1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="eat Peter" tags="" position="1500,900" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="eat Peter" tags="QC" position="1500,900" size="100,100">&lt;&lt;silently&gt;&gt;
 /* define passages */
 &lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
 &lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
@@ -432,8 +457,8 @@ Passage 1 = $passage1
 /* run measurement */
 &lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-Gate array: $gate_array
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Credits" tags="" position="250,549" size="100,100">&lt;div align=&#39;center&#39; style=&#39;font-size: 150%;&#39;&gt;Credits&lt;/div&gt;
+/* Gate array: $gate_array */
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Credits" tags="" position="250,549" size="100,100">&lt;div align=&#39;center&#39; style=&#39;font-size: 150%;&#39;&gt;Credits&lt;/div&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 100%;&#39;&gt;
 	&lt;font color=&quot;grey&quot;&gt;Art&lt;/font&gt;
 	Yishan Qin
