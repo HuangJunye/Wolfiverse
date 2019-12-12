@@ -214,15 +214,14 @@ setup.measurement = function (gate_array) {
 	}
 }
 </script><tw-passagedata pid="1" name="Logo" tags="Logo" position="100,400" size="100,100">&lt;img id=&quot;logo&quot; src=&quot;images/logo.png&quot;/&gt;
-
 &lt;center&gt;[[START|PAW]]&lt;/center&gt;
-
 &lt;div align=&#39;center&#39; style=&#39;font-size: 60%;&#39;&gt;\
     [[Credits]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="PAW" tags="PAW" position="400,400" size="100,100">In the middle of the mountain, the Wolf was lying down on his stomach. 
 &lt;&lt;timed 3s t8n&gt;&gt;After spending the whole day chasing the Crane and the Goat without success, he was a lone outcast left to his own fate.
 &lt;&lt;next&gt;&gt;- AAAUUUUUUUU! -, howled The Wolf
 &lt;&lt;next&gt;&gt;Instead of keeping chasing other wild animals he decided to &lt;&lt;link [[go after the sheep|Fence1]]&gt;&gt;&lt;&lt;/link&gt;&gt; in the nearby village.
+
 &lt;img class=&quot;image&quot; src=&quot;images/sheep.png&quot;/&gt;
 &lt;&lt;/timed&gt;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="LRH" tags="LRH" position="600,200" size="100,100">The Wolf ran away before the villagers arrived.
@@ -236,13 +235,12 @@ setup.measurement = function (gate_array) {
 &lt;&lt;next&gt;&gt;The Wolf was hungry, so he decideed to [[follow one of them|StrawHouse]]
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="GameOverPAW" tags="PAW" position="2300,330" size="100,100">The villagers heard Peter crying for help and came to his rescue.
 &lt;&lt;timed 3s t8n&gt;&gt;Before The Wolf was able to eat Peter they capture him and lock him in a cage where he starves to death.
+
 &lt;img class=&quot;image&quot; src=&quot;images/villager.png&quot;/&gt;
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
     GAME OVER
 &lt;/div&gt;
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39;&gt;
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39;&gt;
 &lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;
@@ -263,12 +261,10 @@ setup.measurement = function (gate_array) {
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,80" size="100,100">Little Red Hood took the mushroom path and arrived to grandmother&#39;s house before the Wolf.
 &lt;&lt;timed 3s t8n&gt;&gt;There was no way for the Wolf to get inside, and he starved to death.
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
 GAME OVER
 &lt;/div&gt;
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1025,275" size="100,100">Litte Red Hood thanked the Wolf and gave him a &lt;span style=&quot;color: grey;&quot;&gt;matchbox&lt;/span&gt;.
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
 &lt;&lt;timed 1s t8n&gt;&gt;The Wolf realized that she was a nice person and decided to &lt;&lt;set $matchbox to true&gt;&gt; /* matchbox is a H gate */[[go back to Peter|Fence2]]
@@ -303,17 +299,17 @@ GAME OVER
 /* $Z is a Z gate */
 &lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t come to rescue Peter this time and the Wolf finally got him!
 &lt;&lt;timed 3s t8n&gt;&gt;After the propper meal he was ready to have some rest in the mountain.
+
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
     WIN!
 &lt;/div&gt;
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" position="1600,200" size="100,100">The Wolf finally got to a house which looked like Grandmother&#39;s House. 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;He was not sure if she was inside, as the windows were closed and the door was locked. 
-&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looked up and decided to go up the roof to [[enter the chimney|QRandom]]
+&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. 
+&lt;&lt;next&gt;&gt;At last, he looked up and decided to go up the roof to [[enter the chimney|QRandom]]
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
@@ -337,7 +333,7 @@ GAME OVER
 &lt;&lt;/link&gt;&gt;
 [[eat the Three Little Pigs|WinTLP]]
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="InsideGranHouse" tags="LRH" position="1800,200" size="100,100">The Wolf landed inside the Grandmother&#39;s House while she was preparing tea in the kitchen. The Wolf caught her by surpise and ate her.
-&lt;img class=&quot;image&quot; src=&quot;https://huangjunye.github.io/Wolfiverse/images/grandma.png&quot;/&gt;
+&lt;img class=&quot;image&quot; src=&quot;images/grandma.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;Suddenly the Wolf heard Little Red Hood aproaching and he thought about using the granmother&#39;s clothes to disguise and trick Little Red Hood. 
 &lt;&lt;next&gt;&gt;The Little Red Hood entered the house and headed straight to the Wolf, now disguised as grandmother. 
 &lt;&lt;next&gt;&gt;Little Red Hood [[felt that something wasn&#39;t quite right.|InsideGranHouse2]]
@@ -361,19 +357,20 @@ GAME OVER
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally got to this Brick House which looked like the house where the Three Little Pigs were having their party. 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;He was not sure if they were inside, as the windows were closed and the door was locked.  
-&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looked up and decided to go up the roof to [[enter the chimney|QRandom]]
+&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired.
+&lt;&lt;next&gt;&gt;At last, he looked up and decided to go up the roof to [[enter the chimney|QRandom]]
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
 &lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
 &lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf was very satisfied and went to rest in the living room couch.
+
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
     WIN!
 &lt;/div&gt;
-&lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
+&lt;&lt;next&gt;&gt;&lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW" position="600,400" size="100,100">As the Wolf approached the fence with the sheep, he noticed a boy nearby. 
 &lt;&lt;timed 3s t8n&gt;&gt;It&#39;s Peter, he recognized the boy.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
@@ -447,7 +444,7 @@ Passage 1 = $passage1
 &lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 /* Gate array: $gate_array */
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Credits" tags="" position="250,549" size="100,100">&lt;div align=&#39;center&#39; style=&#39;font-size: 150%;&#39;&gt;Credits&lt;/div&gt;
+&lt;&lt;timed 3s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Credits" tags="" position="250,549" size="100,100">&lt;div align=&#39;center&#39; style=&#39;font-size: 150%;&#39;&gt;Credits&lt;/div&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 100%;&#39;&gt;
 	&lt;font color=&quot;grey&quot;&gt;Art&lt;/font&gt;
 	Yishan Qin
@@ -460,7 +457,7 @@ Passage 1 = $passage1
 	Omar Costa Hamido
 	Diogo Cunha
 	Sameed Muhammad
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="InsideGranHouse2" tags="LRH" position="1960,115" size="100,100">&lt;img class=&quot;image&quot; src=&quot;https://huangjunye.github.io/Wolfiverse/images/little Red.png&quot;/&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="InsideGranHouse2" tags="LRH" position="1960,115" size="100,100">&lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
 So she asked the grandmother:
 &lt;&lt;timed 2s t8n&gt;&gt;- Why are your eyes so big?
 &lt;&lt;next&gt;&gt;&lt;span style=&quot;color: grey;&quot;&gt;- It is to see you better, my dear!&lt;/span&gt;
