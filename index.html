@@ -137,52 +137,19 @@ body[data-tags~="Logo"] {
 }
 
 body[data-tags~="COVER"] { 
-  background-image: url("images/cover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="COVER"] {
-  background-image: url("images/cover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="COVER"] {
-  background-image: url("images/cover.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #FFFFFF;
 }
 
 body[data-tags~="LRH"] { 
-  background-image: url("images/forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="LRH"] {
-  background-image: url("images/forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #6e0f2d
 }
 
 body[data-tags~="PAW"] { 
-  background-image: url("images/fence.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="PAW"] {
-  background-image: url("images/fence.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #24305e
 }
 
 body[data-tags~="TLP"] { 
-  background-image: url("images/pigs house.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-tw-story[tags~="TLP"] {
-  background-image: url("images/pigs house.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #1D4D4F
 }
 
 @-webkit-keyframes blinker {
@@ -190,14 +157,45 @@ tw-story[tags~="TLP"] {
   to {opacity: 0.0;}
 }
 
+a {
+  color: #f5af22;
+}
+
 a:hover{
+  	color: #f5af22;
 	text-decoration: blink;
 	-webkit-animation-name: blinker;
 	-webkit-animation-duration: 1.0s;
 	-webkit-animation-iteration-count:infinite;
 	-webkit-animation-timing-function:ease-in-out;
 	-webkit-animation-direction: alternate;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.setup = window.setup || {}
+}
+
+body[data-tags~="QC"] {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradientBG 10s ease infinite;
+    }
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.setup = window.setup || {}
 
 Config.ui.stowBarInitially = true
 
@@ -215,32 +213,28 @@ setup.measurement = function (gate_array) {
 		  state.active.variables.result = Http.responseText;
 	}
 }
-
 </script><tw-passagedata pid="1" name="Logo" tags="Logo" position="100,400" size="100,100">&lt;img id=&quot;logo&quot; src=&quot;images/logo.png&quot;/&gt;
 
-&lt;center&gt;[[START|PAW]]&lt;/center&gt;</tw-passagedata><tw-passagedata pid="2" name="PAW" tags="PAW" position="400,400" size="100,100">In the middle of the mountain, The Wolf is lying down on his stomach. 
+&lt;center&gt;[[START|PAW]]&lt;/center&gt;
 
-&lt;&lt;timed 3s t8n&gt;&gt;After spending the whole day chasing the Crane and the Goat without success, this hungry canine is also a lone outcast left to his own fate.
-
-&lt;&lt;next&gt;&gt;- AAAUUUUUUUU! -, cries The Wolf
-
-&lt;&lt;next&gt;&gt;Instead of keeping chasing other wild animals he decides to &lt;&lt;link [[go after the sheep|Fence1]]&gt;&gt;&lt;&lt;/link&gt;&gt; in the village.
+&lt;div align=&#39;center&#39; style=&#39;font-size: 60%;&#39;&gt;\
+    [[Credits]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="PAW" tags="PAW" position="400,400" size="100,100">In the middle of the mountain, the Wolf was lying down on his stomach. 
+&lt;&lt;timed 3s t8n&gt;&gt;After spending the whole day chasing the Crane and the Goat without success, he was a lone outcast left to his own fate.
+&lt;&lt;next&gt;&gt;- AAAUUUUUUUU! -, howled The Wolf
+&lt;&lt;next&gt;&gt;Instead of keeping chasing other wild animals he decided to &lt;&lt;link [[go after the sheep|Fence1]]&gt;&gt;&lt;&lt;/link&gt;&gt; in the nearby village.
 &lt;img id=&quot;logo&quot; src=&quot;images/sheep.png&quot;/&gt;
 &lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="3" name="LRH" tags="LRH" position="600,200" size="100,100">The Wolf runs away before the villagers arrive.
-&lt;&lt;timed 3s t8n&gt;&gt;He finds a house in the midlle of the red forest.
-&lt;&lt;next&gt;&gt;Through an open window he&#39;s able to overhear the mother asking
-Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
-&lt;&lt;next&gt;&gt;The Wolf is hungry, so he decides to:
-[[Follow Red Hood|ForestLRH]]&lt;&lt;/timed&gt;&gt;
-&lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;</tw-passagedata><tw-passagedata pid="4" name="TLP" tags="" position="600,600" size="100,100">The Wolf runs away before the villagers arrive.
-&lt;&lt;timed 3s t8n&gt;&gt;He finds a house in the midlle of the green forest.
+</tw-passagedata><tw-passagedata pid="3" name="LRH" tags="LRH" position="600,200" size="100,100">The Wolf ran away before the villagers arrived.
+&lt;&lt;timed 3s t8n&gt;&gt;He found a house in the middle of the &lt;span style=&quot;color: red;&quot;&gt;red&lt;/span&gt; forest.
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
-&lt;&lt;next&gt;&gt;Through an open window he&#39;s able to overhear the Three Little Pigs talking about this party that they are setting. &lt;&lt;next&gt;&gt;However two of the Little Pigs need to grab something from their homes.
-&lt;&lt;next&gt;&gt;The Wolf is hungry, so he decides to:
-
-[[Follow one of them|StrawHouse]]
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="GameOverPAW" tags="PAW" position="2300,330" size="100,100">The vilagers heard Peter crying for help and came to his rescue.
+&lt;&lt;next&gt;&gt;Through an open window he overheard the mother asking Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
+&lt;&lt;next&gt;&gt;The Wolf was hungry, so he decided to [[follow Red Hood|ForestLRH]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="TLP" tags="TLP" position="600,600" size="100,100">The Wolf ran away before the villagers arrived.
+&lt;&lt;timed 3s t8n&gt;&gt;He found a house in the middle of the &lt;span style=&quot;color: green;&quot;&gt;green&lt;/span&gt; forest.
+&lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
+&lt;&lt;next&gt;&gt;Through an open window he overheard the Three Little Pigs talking about a party that they are preparing. &lt;&lt;next&gt;&gt;Two of the Little Pigs needed to grab something from their homes.
+&lt;&lt;next&gt;&gt;The Wolf was hungry, so he decideed to [[follow one of them|StrawHouse]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="GameOverPAW" tags="PAW" position="2300,330" size="100,100">The villagers heard Peter crying for help and came to his rescue.
 &lt;&lt;timed 3s t8n&gt;&gt;Before The Wolf was able to eat Peter they capture him and lock him in a cage where he starves to death.
 &lt;img class=&quot;image&quot; src=&quot;images/villager.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;
@@ -252,174 +246,168 @@ Little Red Hood to go bring the groceries to her Grandmother&#39;s House.
 &lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/div&gt;
 &lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" position="900,200" size="100,100">The Wolf intersects Red Hood in forest. 
+</tw-passagedata><tw-passagedata pid="6" name="ForestLRH" tags="LRH" position="900,200" size="100,100">The Wolf intersected Red Hood in the forest. 
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;But before he had the oportunity to try anything she asks him what is the best route to get to the Grandmother&#39;s house. &lt;&lt;next&gt;&gt;The wolf thinks for a second and then decides to: 
+&lt;&lt;timed 3s t8n&gt;&gt;But before he had the opportunity to try anything, she asked him what the best route to get to the Grandmother&#39;s house is. 
+&lt;&lt;next&gt;&gt;The Wolf thought for a second and decided to: 
 [[Let her know that the mushroom path is faster to get there. |GameOverRH]]
-[[Deceive her into following the flower path. Leading her on a longer path. |LongPath]]
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="StrawHouse" tags="TLP" position="900,600" size="100,100">The Wolf finds The Little Pig entering a Straw House and decides blow it away. 
+[[Deceived her into following the longer flower path|LongPath]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="StrawHouse" tags="TLP" position="900,600" size="100,100">The Wolf found the Little Pig entering a Straw House and he blowed it away with ease.
 &lt;img class=&quot;image&quot; src=&quot;images/straw house.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;The Little Pig is terrified to see the Wolf and he tries to distract him by offering him a Pie. 
-&lt;&lt;next&gt;&gt;The Wolf:
-[[Refuses it and runs after the the Little Pig |WoodHouse]]
-&lt;&lt;link &quot;Accepts it and leaves the Pig alone&quot; &quot;Fence2&quot;&gt;&gt;
+&lt;&lt;timed 3s t8n&gt;&gt;The Little Pig was terrified. He begged for mercy and offered a &lt;span style=&quot;color: grey;&quot;&gt;pie&lt;/span&gt; to the Wolf.
+&lt;&lt;next&gt;&gt;The Wolf decided to:
+[[refuse it and run after the the Little Pig |WoodHouse]]
+&lt;&lt;link &quot;take it and leave the Little Pig alone&quot; &quot;Fence2&quot;&gt;&gt;
 	/* pie is a H gate */
 	&lt;&lt;set $pie to true&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,80" size="100,100">Little Red Hood takes the mushroom path and arrives to grandmother&#39;s house before The Wolf.
-&lt;&lt;timed 3s t8n&gt;&gt;There is no way for The Wolf to get inside now, and he starves to death.
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="GameOverRH" tags="LRH" position="2300,80" size="100,100">Little Red Hood took the mushroom path and arrived to grandmother&#39;s house before the Wolf.
+&lt;&lt;timed 3s t8n&gt;&gt;There was no way for the Wolf to get inside, and he starved to death.
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
 GAME OVER
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1025,275" size="100,100">Litte Red Hood thanks the Wolf and gives him a matchbox.
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="LongPath" tags="LRH" position="1025,275" size="100,100">Litte Red Hood thanked the Wolf and gave him a &lt;span style=&quot;color: grey;&quot;&gt;matchbox&lt;/span&gt;.
 &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
-&lt;&lt;timed 1s t8n&gt;&gt;The Wolf realizes that she was a nice person and decides to &lt;&lt;set $matchbox to true&gt;&gt; /* matchbox is a H gate */[[go back to Peter|Fence2]]
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW QC" position="1100,400" size="100,100">The Wolf sees Peter again, who start screaming for help.
+&lt;&lt;timed 1s t8n&gt;&gt;The Wolf realized that she was a nice person and decided to &lt;&lt;set $matchbox to true&gt;&gt; /* matchbox is a H gate */[[go back to Peter|Fence2]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Fence2" tags="PAW" position="1100,400" size="100,100">The Wolf saw Peter again, who started screaming for help.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-&lt;&lt;timed 2s t8n&gt;&gt;Last time, he ran away, but this time
-&lt;&lt;next&gt;&gt;The Wolf:
-[[Runs Away Again|QRandom]]
-[[Eat Peter]] 
+&lt;&lt;timed 2s t8n&gt;&gt;Last time, he ran away, but this time the Wolf decided to:
+[[runs away again|QRandom]]
+[[eat Peter]] 
 &lt;&lt;/timed&gt;&gt;
 /* define passages */
 &lt;&lt;set $passage0 to &#39;DecoyRH&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;WoodHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DecoyRH" tags="LRH" position="1300,200" size="100,100">The Wolf finds his way to grandmother&#39;s house but he can cleary hear Little Red Hood approaching.
-&lt;&lt;timed 3s t8n&gt;&gt;He&#39;s still hungry but he can&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. 
-&lt;&lt;next&gt;&gt;Then he decides to:
+&lt;&lt;set $passage1 to &#39;WoodHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="DecoyRH" tags="LRH" position="1300,200" size="100,100">The Wolf found his way to grandmother&#39;s house, while hearing Little Red Hood approaching.
+&lt;&lt;timed 3s t8n&gt;&gt;He was still hungry but he couldn&#39;t go to grandmother&#39;s house at the same time as Little Red Hood. 
+&lt;&lt;next&gt;&gt;He decided to:
 &lt;&lt;if $pie is true&gt;&gt;
-	[[Use the pie as a decoy to get to grandmother&#39;s first|GranHouse]]
-	[[Go after Peter once again|Fence3]]
+	[[use the pie as a decoy to get to grandmother&#39;s first|GranHouse]]
+	[[go after Peter once again|Fence3]]
 &lt;&lt;else&gt;&gt;
-	[[Go after Peter once again|Fence3]]
+	[[go after Peter once again|Fence3]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 /* $Z is a Z gate */
-&lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="WoodHouse" tags="TLP" position="1300,600" size="100,100">The Wolf finds the Wood House and he can cleary hear two Little Pigs inside talking about this party. 
+&lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="WoodHouse" tags="TLP" position="1300,600" size="100,100">The Wolf found a Wood House where he heard two of the Little Pigs inside talking about their party. 
 &lt;img class=&quot;image&quot; src=&quot;images/wood house.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;He&#39;s still hungry and tries to blow up their house without success. &lt;&lt;next&gt;&gt;Then he decides to:
-&lt;&lt;if $matchbox is true&gt;&gt;
-	[[Burn it Down and chase the Little Pigs|BrickHouse]]
-	[[Give up and go after Peter|Fence3]]
+&lt;&lt;timed 3s t8n&gt;&gt;He tried to blow the house up like the last time, without success. He then decided to:&lt;&lt;if $matchbox is true&gt;&gt;
+	[[gurn it down using match|BrickHouse]]
+	[[give up and go after Peter|Fence3]]
 &lt;&lt;else&gt;&gt;
-	[[Give up and go after Peter|Fence3]]
+	[[give up and go after Peter|Fence3]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/timed&gt;&gt;
 /* $Z is a Z gate */
-&lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t came to rescue Peter this time and The Wolf finally gets him!
-&lt;&lt;timed 3s t8n&gt;&gt;After this propper meal he&#39;s ready to have some rest in the mountain.
+&lt;&lt;set $Z to true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="WinPAW" tags="PAW" position="2300,450" size="100,100">The villagers didn&#39;t come to rescue Peter this time and the Wolf finally got him!
+&lt;&lt;timed 3s t8n&gt;&gt;After the propper meal he was ready to have some rest in the mountain.
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;
-&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
-    Win!
+&lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;
+    WIN!
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" position="1600,200" size="100,100">The Wolf finally gets to this house which looks like Grandmother&#39;s House. 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="GranHouse" tags="LRH" position="1600,200" size="100,100">The Wolf finally got to a house which looked like Grandmother&#39;s House. 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;He&#39;s not sure if she is in there, as the windows are closed and the door is locked. 
-&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looks up and decides to go up the roof and [[enter the chimney|QRandom]] 
+&lt;&lt;timed 3s t8n&gt;&gt;He was not sure if she was inside, as the windows were closed and the door was locked. 
+&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looked up and decided to go up the roof to [[enter the chimney|QRandom]]
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
 &lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Fence3" tags="PAW" position="1500,400" size="100,100">The Wolf sees Peter again, who start screaming for help.
+&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Fence3" tags="PAW" position="1500,400" size="100,100">The Wolf saw Peter again, who started screaming for help.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-&lt;&lt;timed 2s t8n&gt;&gt;Last time, he ran away, but this time
-&lt;&lt;next&gt;&gt;The Wolf:
-[[Still leaves him alone and Runs Away|QRandom]]
-[[Eat Peter]] 
+&lt;&lt;timed 2s t8n&gt;&gt;Last time, he ran away, but this time the Wolf decided to:
+[[still leave Peter alone and run away|QRandom]]
+[[eat Peter]] 
 &lt;&lt;/timed&gt;&gt;
 /* define passages */
 &lt;&lt;set $passage0 to &#39;GranHouse&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;BrickHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideBrickHouse" tags="TLP" position="1800,600" size="100,100">The Wolf lands inside the Brick House and the Three Little Pigs were still preparing the party in the kitchen. 
+&lt;&lt;set $passage1 to &#39;BrickHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideBrickHouse" tags="TLP" position="1800,600" size="100,100">The Wolf landed inside the Brick House and saw the Three Little Pigs in the kitchen, still preparing their party. 
 &lt;img class=&quot;image&quot; src=&quot;images/pig.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;While he is making his way, tip tap toeing he notices a huge sheep skin coat. 
-&lt;&lt;next&gt;&gt;He thinks to himself that this could allow him to finnally get close to Peter without him screaming for help. 
-&lt;&lt;next&gt;&gt;Faced with this option he decides to: 
-[[Eat the Three Little Pigs|WinTLP]]
-&lt;&lt;link &#39;Grab the coat and go after Peter&#39; &#39;GetPeter&#39;&gt;&gt;
+&lt;&lt;timed 3s t8n&gt;&gt;While making his way tiptoeing, the Wolf noticed a huge sheep skin coat. 
+&lt;&lt;next&gt;&gt;The coat could allow him to finally get close to Peter without him screaming for help. 
+&lt;&lt;next&gt;&gt;Faced with this option the Wolf decided to: 
+&lt;&lt;link &#39;grab the coat and go after Peter&#39; &#39;GetPeter&#39;&gt;&gt;
 	/* sheep_skin is a H gate */
 	&lt;&lt;set $sheep_skin to true&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="InsideGranHouse" tags="LRH" position="1800,200" size="100,100">The Wolf lands inside the Grandmother&#39;s House while she is still preparing some tea in the kitchen. The Wolf cathes her by surpise and eats her.
+[[eat the Three Little Pigs|WinTLP]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="InsideGranHouse" tags="LRH" position="1800,200" size="100,100">The Wolf landed inside the Grandmother&#39;s House while she was preparing tea in the kitchen. The Wolf caught her by surpise and ate her.
 &lt;img class=&quot;image&quot; src=&quot;images/grandma.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;Sudenly the Wolf hears Little Red Hood aproaching the house and he thinks about using the granmother&#39;s clothes to disguise himself and trick Little Red Hood.
-&lt;&lt;next&gt;&gt;The Little Red Hood enters the house and heads straight to the Wolf, now disguised as grandmother. &lt;&lt;next&gt;&gt;Even thoug she was wearing her normal clothes, Little Red Hood felt that something wasn&#39;t quite right. &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
-&lt;&lt;next&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;So she decided to ask the grandmother:
-- why are your eyes so big?
-&lt;&lt;next&gt;&gt;The Wolf replies:
-- It is to see you better, my dear!
-&lt;&lt;next&gt;&gt;- And why are you ears so pointy? - asked Little Red Hood.
-&lt;&lt;next&gt;&gt;- It is to listen to you better, of course! - replied the Wolf.
-&lt;&lt;next&gt;&gt;- And what about your teeth, why are they so sharp? - insisted Little Red Hood.
-&lt;&lt;next&gt;&gt;The Wolf, thought for a secound and replied:
-[[- It is to eat the food that I am about to cook for us!|WinLRH]]
+&lt;&lt;timed 3s t8n&gt;&gt;Suddenly the Wolf heard Little Red Hood aproaching and he thought about using the granmother&#39;s clothes to disguise and trick Little Red Hood.
+&lt;&lt;next&gt;&gt;The Little Red Hood entered the house and headed straight to the Wolf, now disguised as grandmother. &lt;&lt;next&gt;&gt;Little Red Hood felt that something wasn&#39;t quite right. &lt;img class=&quot;image&quot; src=&quot;images/little Red.png&quot;/&gt;
+&lt;&lt;next&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;So she asked the grandmother:
+- Why are your eyes so big?
+&lt;&lt;next&gt;&gt;- It is to see you better, my dear!
+
+&lt;&lt;next&gt;&gt;- And why are you ears so pointy?
+&lt;&lt;next&gt;&gt;- It is to listen to you better, of course!
+
+&lt;&lt;next&gt;&gt;- And what about your teeth, why are they so sharp?
+&lt;&lt;next&gt;&gt;[[- It&#39;s to eat the food that I am about to cook for us!|WinLRH]]
 [[- The better to eat you, my dear!|ChaseLRH]]
 &lt;&lt;/timed&gt;&gt;&lt;&lt;/timed&gt;&gt;
 /* grandmother&#39;s clothes is a H gate */
-&lt;&lt;set $grandma_clothes to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2300,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup with the ingredients that she brought him, he pushes her inside while she is mixing the soup.
-&lt;&lt;timed 3s t8n&gt;&gt;The Wolf finally gets a propper meal and goes to rest in the grandmother&#39;s bed.
+&lt;&lt;set $grandma_clothes to true&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="WinLRH" tags="LRH" position="2300,200" size="100,100">Fooling Little Red Hood into helping him to prepare a big bowl of soup, the Wolf pushed her inside while she is mixing the soup.
+&lt;&lt;timed 3s t8n&gt;&gt;The Wolf finally got a propper meal and went to rest in the grandmother&#39;s bed.
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
-    Win!
+    WIN!
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39;&gt;
 &lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="ChaseLRH" tags="LRH" position="1925,275" size="100,100">Litle Red Hood realizes the grandmother was the Wolf in disguse and runs away.
-&lt;&lt;timed 3s t8n&gt;&gt;The Wolf tries to chase her, but she is too fast for him.
-&lt;&lt;next&gt;&gt;Taking into account all the hard work to get into this disguise, the Wolf decides to go after Peter one last time.
-&lt;&lt;next&gt;&gt;The Wolf thinks to himself: surelly Peter would not suspect of an old lady aproaching him! 
-
-[[continue...|GetPeter]]
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="GetPeter" tags="PAW" position="2000,400" size="100,100">Wearing his new disguise the Wolf is able to get closer to Peter without him suspecting of anything. 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="ChaseLRH" tags="LRH" position="1925,275" size="100,100">Little Red Hood realized the grandmother was the Wolf in disguse and ran away.
+&lt;&lt;timed 3s t8n&gt;&gt;The Wolf was too tired to chase her. Instead he decided to [[go after Peter|GetPeter]] one last time.
+&lt;&lt;next&gt;&gt;The Wolf thought to himself: surelly Peter would not suspect of an old lady aproaching him! 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="GetPeter" tags="PAW" position="2000,400" size="100,100">Wearing his new disguise the Wolf could easily get close to Peter
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;The Wolf is extremely hungry at this point and so he jumps to [[eat peter|Eat Peter]].
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally gets to this Brick House which looks like the house where the Three Little Pigs were having their party. 
+&lt;&lt;timed 3s t8n&gt;&gt;The Wolf was extremely hungry at this point and so he [[jumped on Peter|eat Peter]]!
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="BrickHouse" tags="TLP" position="1600,600" size="100,100">The Wolf finally got to this Brick House which looked like the house where the Three Little Pigs were having their party. 
 &lt;img class=&quot;image&quot; src=&quot;images/brick house.png&quot;/&gt;
-&lt;&lt;timed 3s t8n&gt;&gt;He&#39;s not sure if they are inside, as the windows are closed and the door is locked. 
-&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looks up and decides to go up the roof and [[enter the chimney|QRandom]]
+&lt;&lt;timed 3s t8n&gt;&gt;He was not sure if they were inside, as the windows were closed and the door was locked.  
+&lt;&lt;next&gt;&gt;All this running back and forth has got him really tired. &lt;&lt;next&gt;&gt;At last, he looked up and decided to go up the roof to [[enter the chimney|QRandom]]
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
 &lt;&lt;set $passage0 to &#39;InsideBrickHouse&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf finally gets a propper meal and goes to rest in the living room couch.
+&lt;&lt;set $passage1 to &#39;InsideGranHouse&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="WinTLP" tags="TLP" position="2300,700" size="100,100">After eating the Three Little Pigs, the Wolf was very satisfied and went to rest in the living room couch.
 &lt;img class=&quot;image&quot; src=&quot;images/wolf.png&quot;/&gt;
 &lt;&lt;timed 3s t8n&gt;&gt;
 &lt;div align=&#39;center&#39; style=&#39;font-size: 300%;&#39;&gt;\
-    Win!
+    WIN!
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;
 &lt;div align=&#39;center&#39;&gt;&lt;&lt;click &quot;Start over&quot;&gt;&gt;&lt;&lt;script&gt;&gt;UI.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/click&gt;&gt;&lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW QC" position="600,400" size="100,100">As the Wolf approaches the fence with the sheep, he notices a boy nearby. 
-&lt;&lt;timed 3s t8n&gt;&gt;He recognizes this boy: it&#39;s Peter. 
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Fence1" tags="PAW" position="600,400" size="100,100">As the Wolf approached the fence with the sheep, he noticed a boy nearby. 
+&lt;&lt;timed 3s t8n&gt;&gt;It&#39;s Peter, he recognized the boy.
 &lt;img class=&quot;image&quot; src=&quot;images/Peter.png&quot;/&gt;
-&lt;&lt;next&gt;&gt;Peter used to throw rocks at him. &lt;&lt;next&gt;&gt;While observing Peter he thinks to himself that the boy would be a much better meal!
-&lt;&lt;next&gt;&gt;He tries to get near him, but before he can come too close Peter screams for help.
-&lt;&lt;next&gt;&gt;The Wolf:
-[[Runs Away|QRandom]]
-[[Eat Peter]] 
+&lt;&lt;next&gt;&gt;Peter used to throw rocks at him. &lt;&lt;next&gt;&gt;While observing Peter, the Wolf thought to himself that the boy would be a much better meal!
+&lt;&lt;next&gt;&gt;Before he could get close, Peter screamed for help.
+&lt;&lt;next&gt;&gt;The Wolf decided to:
+[[run away|QRandom]]
+[[eat Peter]] 
 &lt;&lt;/timed&gt;&gt;
 
 /* define passages */
 &lt;&lt;set $passage0 to &#39;LRH&#39;&gt;&gt;
-&lt;&lt;set $passage1 to &#39;TLP&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QRandom" tags="" position="900,900" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $passage1 to &#39;TLP&#39;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="QRandom" tags="QC" position="900,900" size="100,100">&lt;&lt;silently&gt;&gt;
 /* use H gate for random outcome */
 &lt;&lt;set $gate_array to &quot;H,I,I&quot;&gt;&gt;
 /* run measurement */
 &lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-Gate array: $gate_array
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-</tw-passagedata><tw-passagedata pid="25" name="Measurement Outcome" tags="QC" position="1200,900" size="100,100">Measurement result = $result
+/* Gate array: $gate_array */
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Measurement Outcome" tags="QC" position="1200,900" size="100,100">/* Measurement result = $result
 Passage 0 = $passage0
 Passage 1 = $passage1
-
+*/
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;if $result == 0&gt;&gt;
 	&lt;&lt;set $next to $passage0&gt;&gt;
@@ -427,7 +415,7 @@ Passage 1 = $passage1
 	&lt;&lt;set $next to $passage1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Eat Peter" tags="" position="1500,900" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;goto $next&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="eat Peter" tags="QC" position="1500,900" size="100,100">&lt;&lt;silently&gt;&gt;
 /* define passages */
 &lt;&lt;set $passage0 to &quot;GameOverPAW&quot;&gt;&gt;
 &lt;&lt;set $passage1 to &quot;WinPAW&quot;&gt;&gt;
@@ -469,8 +457,21 @@ Passage 1 = $passage1
 /* run measurement */
 &lt;&lt;run setup.measurement($gate_array)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-Gate array: $gate_array
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata></tw-storydata>
+/* Gate array: $gate_array */
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;Measurement Outcome&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Credits" tags="" position="250,549" size="100,100">&lt;div align=&#39;center&#39; style=&#39;font-size: 150%;&#39;&gt;Credits&lt;/div&gt;
+&lt;div align=&#39;center&#39; style=&#39;font-size: 100%;&#39;&gt;
+	&lt;font color=&quot;grey&quot;&gt;Art&lt;/font&gt;
+	Yishan Qin
+	
+	&lt;font color=&quot;grey&quot;&gt;Programming&lt;/font&gt;
+    Aurélien Da Campo
+	Huang Junye
+	
+	&lt;font color=&quot;grey&quot;&gt;Story&lt;/font&gt;
+	Omar Costa Hamido
+	Diogo Cunha
+	Sameed Muhammad
+&lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="\\s"===e?"\\S":e.replace(/^\[/,"[^"),r="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",n=r.replace("\\-",""),a=function(){return"("+r+"+)\\(([^\\)\\|\\n]+)\\):|("+r+"+):([^;\\|\\n]+);|((?:\\."+r+"+)+);|((?:#"+r+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:t,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:r,anyLetterStrict:n,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){!function(e){if(e&&e.prototype&&null==e.prototype.firstElementChild){var t=Node.ELEMENT_NODE;Object.defineProperty(e.prototype,"firstElementChild",{get:function(){for(var e=this.childNodes,r=0;r<e.length;++r){var n=e[r];if(n.nodeType===t)return n}return null}})}}(window.Node||window.Element)}(),function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=e&&function(){try{var e=document.createElement("audio").play();return e.catch(function(){}),e instanceof Promise}catch(e){}return!1}(),r=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),n=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),i=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),o=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),s=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,audioPromise:t,fileAPI:r,geolocation:n,mutationObserver:a,performance:i,touch:o,transitionEndEvent:s})}(),Visibility=function(){function e(){return Boolean(r&&document[r.hiddenProperty])}function t(){return r&&document[r.stateProperty]||"visible"}var r=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return null}();return Object.freeze(Object.defineProperties({},{isHidden:{value:e},state:{value:t},hiddenProperty:{value:r.hiddenProperty},stateProperty:{value:r.stateProperty},changeEvent:{value:r.changeEvent}}))}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){return r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){switch(n.nodeName.toUpperCase()){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){var n=jQuery(document.createElement("div")),a=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return a.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){a.hasClass("enabled")?(a.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(a.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(n),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(n),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(n),n.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var n=_slicedToArray(e,2),a=n[0],i=n[1];return r(a,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))
