@@ -20,11 +20,23 @@ The probability of eating Peter is also determined by the measurement outcome of
 
 The main game is written using Twine, which is a open-source tool for telling interactive, nonlinear stories. Twine game is based on the Web stack: HTML, CSS and Javascript. The game can be easily hosted anywhere without the need of installation.
 
-### Qiskit flask server
-
-Because Twine doens't use Python, we need a way to communicate the game with Qiskit. The communication is achieved by HTTP protocol with a Qiskit flask server hosted on Heroku cloud application platform.
+Because Twine doesn't use Python, we need a way to communicate the game with Qiskit. The communication is achieved by HTTP protocol with Qiskit running on a Flask server hosted on Heroku cloud application platform.
 
 A gate string like "H,I,I" is passed to the server, which converts it to a `QuantumCircuit` object and runs it in `qasm_simulator` backend. The result is returned to the game to determine the next scene.
+
+In `server.py` under `qiskit-flask-server` folder:
+
+```python
+@app.route('/api/run/do_measurement', methods=['Get'])
+def do_measurement():
+    circuit_dimension = CIRCUIT_DIMENSION
+    gate_string = request.args['gate_array']
+    print("--------------")
+    print(gate_string)
+
+    reply = measurement(circuit_dimension, gate_string)
+    return reply
+```
 
 In Twine, we put the following code in the "story javascript".
 
