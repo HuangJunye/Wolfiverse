@@ -1,4 +1,0 @@
-flask
-json_tricks
-qiskit
-numpy
