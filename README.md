@@ -10,7 +10,7 @@ A hungrey wolf wants to eat Peter in the boy who cried the wolf story. The wolf 
 
 ## Quantum mechanics
 
-Quantum mechanics, implemented by a quantum circuit in Qiskit, is used in two aspects in the game: random destination whenever the wolf leaves Peter and the probability of eating Peter.
+Quantum mechanics, implemented by a quantum circuit in Qiskit, is used in two aspects in the game: random destination whenever the wolf leaves Peter and the probability of eating Peter. Check [this Jupyter notebook](tutorial.ipynb) for details.
 
 The random destination is determined by a single-shot measurement outcome of a qubit with |+> = |0> + |1> state, realized by H gate.
 
